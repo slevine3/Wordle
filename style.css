@@ -94,6 +94,11 @@ body {
   justify-content: center;
   align-items: center;
   user-select: none;
+  transition: transform 250ms linear;
+  -webkit-transition: transform 250ms linear;
+  -moz-transition: transform 250ms linear;
+  -ms-transition: transform 250ms linear;
+  -o-transition: transform 250ms linear;
 }
 
 .tile[data-state="active"] {
@@ -114,55 +119,119 @@ body {
   background-color: hsl(115, 29%, 43%);
 }
 
-.tile.shake{
+.tile.shake {
   animation: shake 250ms ease-in-out;
   -webkit-animation: shake 250ms ease-in-out;
 }
+.tile.dance {
+  animation: dance 500ms ease-in-out;
+  -webkit-animation: dance 500ms ease-in-out;
+}
+
+.tile.flip {
+  transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+}
 
 @keyframes shake {
-  10%{
-    transform: translateX(-5%)  ;
-    -webkit-transform: translateX(-5%)  ;
-    -moz-transform: translateX(-5%)  ;
-    -ms-transform: translateX(-5%)  ;
-    -o-transform: translateX(-5%)  ;
+  10% {
+    transform: translateX(-5%);
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -o-transform: translateX(-5%);
+  }
+  30% {
+    transform: translateX(5%);
+    -webkit-transform: translateX(5%);
+    -moz-transform: translateX(5%);
+    -ms-transform: translateX(5%);
+    -o-transform: translateX(5%);
+  }
+  50% {
+    transform: translateX(-7.5%);
+    -webkit-transform: translateX(-7.5%);
+    -moz-transform: translateX(-7.5%);
+    -ms-transform: translateX(-7.5%);
+    -o-transform: translateX(-7.5%);
+  }
+  70% {
+    transform: translateX(7.5%);
+    -webkit-transform: translateX(7.5%);
+    -moz-transform: translateX(7.5%);
+    -ms-transform: translateX(7.5%);
+    -o-transform: translateX(7.5%);
+  }
+  90% {
+    transform: translateX(-5%);
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -o-transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
 }
-30%{
-  transform: translateX(5%);
-  -webkit-transform: translateX(5%);
-  -moz-transform: translateX(5%);
-  -ms-transform: translateX(5%);
-  -o-transform: translateX(5%);
+
+
+
+@keyframes dance {
+20% {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
-50%{
-  transform: translateX(-7.5%);
-  -webkit-transform: translateX(-7.5%);
-  -moz-transform: translateX(-7.5%);
-  -ms-transform: translateX(-7.5%);
-  -o-transform: translateX(-7.5%);
+40% {
+  transform: translateY(5%);
+  -webkit-transform: translateY(5%);
+  -moz-transform: translateY(5%);
+  -ms-transform: translateY(5%);
+  -o-transform: translateY(5%);
 }
-70%{
-  transform: translateX(7.5%);
-  -webkit-transform: translateX(7.5%);
-  -moz-transform: translateX(7.5%);
-  -ms-transform: translateX(7.5%);
-  -o-transform: translateX(7.5%);
+60% {
+  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+  -moz-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  -o-transform: translateY(-25%);
 }
-90%{
-  transform: translateX(-5%);
-  -webkit-transform: translateX(-5%);
-  -moz-transform: translateX(-5%);
-  -ms-transform: translateX(-5%);
-  -o-transform: translateX(-5%);
+80% {
+  transform: translateY(2.5%);
+  -webkit-transform: translateY(2.5%);
+  -moz-transform: translateY(2.5%);
+  -ms-transform: translateY(2.5%);
+  -o-transform: translateY(2.5%);
 }
-100%{
-  transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
+90% {
+  transform: translateY(-5%);
+  -webkit-transform: translateY(-5%);
+  -moz-transform: translateY(-5%);
+  -ms-transform: translateY(-5%);
+  -o-transform: translateY(-5%);
+}
+100% {
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
 }
 }
+
+
+
+
+
 
 .alert-container {
   position: fixed;
@@ -204,4 +273,3 @@ body {
 .alert.hide {
   opacity: 0;
 }
-
