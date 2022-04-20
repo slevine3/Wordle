@@ -1,3 +1,5 @@
 # Wordle Clone
 ## Created with JavaScript, HTML, and CSS
-## Responsive scalable design 
+## Responsive design
+
+### View my demo video at: www.loom.com 
